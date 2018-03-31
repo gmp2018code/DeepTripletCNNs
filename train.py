@@ -279,7 +279,7 @@ def train(train_loader, tnet, criterion, optimizer, epoch,netRecord):
         
         loss_triplet = criterion(dista, distb, target)
         loss_embedd = embedded_x.norm(2) + embedded_y.norm(2) + embedded_z.norm(2)
-        loss = loss_triplet + 0.001 * loss_embedd
+        loss = loss_triplet 
 
         # measure accuracy and record loss
         acc = accuracy(dista, distb)
